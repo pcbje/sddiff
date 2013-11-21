@@ -13,10 +13,7 @@ Python tool for visuzalizing data similarity. The algorithm is based on the work
 
 #### Demonstration
 
-##### Running
 <pre><code>$ python bufldiff.py test/document1.doc test/document2.doc test/result.png</code></pre>
-
-##### Yields result
 
 The white strokes represent the position of differences between the two files.
 
