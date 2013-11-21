@@ -13,11 +13,30 @@ Python tool for visuzalizing data similarity. The algorithm is based on the work
 
 #### Demonstration
 
-<pre><code>python bufldiff.py test/document1.doc test/document2.doc test/result.png</code></pre>
+Running:
+<pre><code>$ python bufldiff.py test/document1.doc test/document2.doc test/result.png</code></pre>
 
 ##### Input
 
 ###### test/document1.txt
+<pre><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec lectus purus. 
+Maecenas sollicitudin, lectus vel pharetra aliquet, magna nisl tincidunt nisi, 
+sit amet pharetra urna orci vitae odio. [...] Aliquam ipsum diam, euismod id mi 
+nec, faucibus aliquam velit. Integer adipiscing elit vel sapien cursus vulputate. 
+Donec imperdiet leo eget lacus tincidunt tristique. Phasellus mattis diam eu urna 
+gravida lacinia. Fusce eu elit eu velit rhoncus tristique eu at diam. Vestibulum 
+sollicitudin ligula ipsum, quis accumsan nisl molestie interdum. Aliquam est urna, 
+gravida at leo eu, semper pharetra dui.
+
+Etiam et sapien ac orci fermentum pellentesque. Pellentesque eu elit massa. [...]
+
+Praesent eget cursus odio, sed consectetur orci. In tempus imperdiet consectetur. 
+Morbi diam odio, eleifend in urna bibendum, cursus feugiat eros. Fusce commodo 
+condimentum consequat. Donec non sem at urna vestibulum aliquam. Proin ut diam ac 
+tortor pellentesque dictum non sit amet sem. Nunc mattis nibh sit amet odio 
+imperdiet condimentum. Vivamus gravida eu odio vel dapibus.</code></pre>
+
+###### test/document2.txt
 <pre><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec lectus purus. 
 Maecenas sollicitudin, lectus vel pharetra aliquet, magna nisl tincidunt nisi, 
 sit amet pharetra urna orci vitae odio. Aliquam massa purus, pulvinar quis 
@@ -41,29 +60,9 @@ condimentum consequat. Donec non sem at urna vestibulum aliquam. Proin ut diam a
 tortor pellentesque dictum non sit amet sem. Nunc mattis nibh sit amet odio 
 imperdiet condimentum. Vivamus gravida eu odio vel dapibus.</code></pre>
 
-###### test/document2.txt
-<pre><code>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec lectus purus. 
-Maecenas sollicitudin, lectus vel pharetra aliquet, magna nisl tincidunt nisi, 
-sit amet pharetra urna orci vitae odio. Aliquam massa purus, pulvinar quis ultricies 
-sed, rutrum vitae purus. [...] Donec imperdiet leo eget lacus tincidunt tristique. 
-Phasellus mattis diam eu urna gravida lacinia. Fusce eu elit eu velit rhoncus 
-tristique eu at diam. Vestibulum sollicitudin ligula ipsum, quis accumsan nisl 
-molestie interdum. Aliquam est urna, gravida at leo eu, semper pharetra dui.
-
-[...]
-
-Praesent eget cursus odio, sed consectetur orci. In tempus imperdiet consectetur. 
-Morbi diam odio, eleifend in urna bibendum, cursus feugiat eros. Fusce commodo 
-condimentum consequat. Donec non sem at urna vestibulum aliquam. Proin ut diam ac 
-tortor pellentesque dictum non sit amet sem. Nunc mattis nibh sit amet odio 
-imperdiet condimentum. Vivamus gravida eu odio vel dapibus.</code></pre>
-
 ##### Result
 
 The white strokes represent the position of differences between the two files.
-
-###### test/output.png
 
 <div align="center"><img src="https://raw.github.com/pcbje/bufldiff/master/test/output.png" width="500"/></div>
 
