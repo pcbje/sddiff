@@ -59,11 +59,11 @@ condimentum consequat. Donec non sem at urna vestibulum aliquam. Proin ut diam a
 tortor pellentesque dictum non sit amet sem. Nunc mattis nibh sit amet odio 
 imperdiet condimentum. Vivamus gravida eu odio vel dapibus.</code></pre>
 
-#### Result
+##### Result
 
 The white strokes represent the position of differences between the two files.
 
-##### test/output.png
+###### test/output.png
 
 <div align="center"><img src="https://raw.github.com/pcbje/bufldiff/master/test/output.png" width="500"/></div>
 
