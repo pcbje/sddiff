@@ -155,7 +155,7 @@ class Buflfeature(object):
 			
       counts[max_index] += 1
 
-      if self.position >= WINDOW_SIZE and counts[max_index] == 2:
+      if self.position >= WINDOW_SIZE and counts[max_index] == 10:
         callback(windows[max_index])
 
     return self
@@ -205,7 +205,7 @@ class Bufldiff(object):
     if value == -1:
       return {
         'color': pyx.color.rgb.white,
-        'factor': 4
+        'factor': 6
       }
     else:
       return {
