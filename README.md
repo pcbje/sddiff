@@ -62,4 +62,7 @@ imperdiet condimentum. Vivamus gravida eu odio vel dapibus.</code></pre>
 
 Running bufldiff on the two files yields the following result:
 
-![](https://raw.github.com/pcbje/bufldiff/master/test/output.png)
+<div style="text-align:center">
+  <div style="margin:0 auto;border:1px solid #000"><img src="https://raw.github.com/pcbje/bufldiff/master/test/output.png" width="400"/></div>
+</div>
+
