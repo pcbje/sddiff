@@ -16,9 +16,9 @@ $ python bufldiff.py document1.doc document2.doc result.png</code></pre>
 
 #### Demonstration
 
-Given two text documents:
+##### Input
 
-##### document1.txt
+###### document1.txt
 <pre><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec lectus purus. 
 Maecenas sollicitudin, lectus vel pharetra aliquet, magna nisl tincidunt nisi, 
 sit amet pharetra urna orci vitae odio. Aliquam massa purus, pulvinar quis 
@@ -42,7 +42,7 @@ condimentum consequat. Donec non sem at urna vestibulum aliquam. Proin ut diam a
 tortor pellentesque dictum non sit amet sem. Nunc mattis nibh sit amet odio 
 imperdiet condimentum. Vivamus gravida eu odio vel dapibus.</code></pre>
 
-##### document2.txt
+###### document2.txt
 <pre><code>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec lectus purus. 
 Maecenas sollicitudin, lectus vel pharetra aliquet, magna nisl tincidunt nisi, 
@@ -60,9 +60,9 @@ condimentum consequat. Donec non sem at urna vestibulum aliquam. Proin ut diam a
 tortor pellentesque dictum non sit amet sem. Nunc mattis nibh sit amet odio 
 imperdiet condimentum. Vivamus gravida eu odio vel dapibus.</code></pre>
 
-Running bufldiff on the two files yields the following result:
+#### Output.png
 
-<div style="text-align:center">
-  <div style="margin:0 auto;border:1px solid #000"><img src="https://raw.github.com/pcbje/bufldiff/master/test/output.png" width="400"/></div>
-</div>
+The white strokes represent the position of differences between the two files.
+
+<div align="center"><img src="https://raw.github.com/pcbje/bufldiff/master/test/output.png" width="500"/></div>
 
