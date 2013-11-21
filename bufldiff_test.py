@@ -29,8 +29,7 @@ class BuflDiffUnitTest(unittest.TestCase):
     diff.close()
 
   def callback(self, feature): 
-    self.assertNotEqual(None, feature)
-    pass
+    self.assertNotEqual(None, feature)    
   
   def testDiff(self):
     diff = bufldiff.Bufldiff()
