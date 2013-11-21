@@ -9,16 +9,15 @@ Python tool for visuzalizing data similarity. The algorithm is based on the work
 
 #### Usage
 
-<pre><code>$ python bufldiff.py &lt;path1> &lt;path2> &lt;output.png>
-
-# E.g.:
-$ python bufldiff.py document1.doc document2.doc result.png</code></pre>
+<pre><code>$ python bufldiff.py &lt;path1> &lt;path2> &lt;output.png></code></pre>
 
 #### Demonstration
 
+<pre><code>python bufldiff.py test/document1.doc test/document2.doc test/result.png</code></pre>
+
 ##### Input
 
-###### document1.txt
+###### test/document1.txt
 <pre><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec lectus purus. 
 Maecenas sollicitudin, lectus vel pharetra aliquet, magna nisl tincidunt nisi, 
 sit amet pharetra urna orci vitae odio. Aliquam massa purus, pulvinar quis 
@@ -42,7 +41,7 @@ condimentum consequat. Donec non sem at urna vestibulum aliquam. Proin ut diam a
 tortor pellentesque dictum non sit amet sem. Nunc mattis nibh sit amet odio 
 imperdiet condimentum. Vivamus gravida eu odio vel dapibus.</code></pre>
 
-###### document2.txt
+###### test/document2.txt
 <pre><code>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec lectus purus. 
 Maecenas sollicitudin, lectus vel pharetra aliquet, magna nisl tincidunt nisi, 
@@ -60,9 +59,11 @@ condimentum consequat. Donec non sem at urna vestibulum aliquam. Proin ut diam a
 tortor pellentesque dictum non sit amet sem. Nunc mattis nibh sit amet odio 
 imperdiet condimentum. Vivamus gravida eu odio vel dapibus.</code></pre>
 
-#### Output.png
+#### Result
 
 The white strokes represent the position of differences between the two files.
+
+##### test/output.png
 
 <div align="center"><img src="https://raw.github.com/pcbje/bufldiff/master/test/output.png" width="500"/></div>
 
