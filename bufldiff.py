@@ -186,7 +186,7 @@ class Bufldiff(object):
 
     if str(feature['bytes']) in self.references:
       self.result[position] = 1
-    else:
+    elif self.result[position] == 0:
       self.result[position] = -1
 
     self.feature_count += 1
