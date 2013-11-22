@@ -207,16 +207,16 @@ class Bufldiff(object):
           pos += step
 
     # Bottom horizontal
-    canvas.stroke(pyx.path.line(0,0,pos + step,0), [pyx.style.linewidth(step), pyx.color.rgb.black])
+    canvas.stroke(pyx.path.line(0,0,pos + step,0), [pyx.style.linewidth(step / 2), pyx.color.rgb.black])
 
     # Top horizontal
-    canvas.stroke(pyx.path.line(0, height + (step * 1.5), pos + step, height + (step * 1.5)), [pyx.style.linewidth(step), pyx.color.rgb.black])
+    canvas.stroke(pyx.path.line(0, height + (step * 1.5), pos + step, height + (step * 1.5)), [pyx.style.linewidth(step / 2), pyx.color.rgb.black])
 
     # Left vertical
-    canvas.stroke(pyx.path.line(0,0,0,height + (step * 1.5)), [pyx.style.linewidth(step), pyx.color.rgb.black])
+    canvas.stroke(pyx.path.line(0,0,0,height + (step * 1.5)), [pyx.style.linewidth(step / 2), pyx.color.rgb.black])
 
     # Right vertical
-    canvas.stroke(pyx.path.line(pos + step,0,pos + step, height + (step * 1.5)), [pyx.style.linewidth(step), pyx.color.rgb.black])
+    canvas.stroke(pyx.path.line(pos + step,0,pos + step, height + (step * 1.5)), [pyx.style.linewidth(step / 2), pyx.color.rgb.black])
 
     canvas.writeGSfile(path)
 
