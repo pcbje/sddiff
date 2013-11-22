@@ -17,7 +17,7 @@ Note: The tool is currently too slow for operational use.
 
 <pre><code>$ python bufldiff.py test/document1.doc test/document2.doc test/result.png</code></pre>
 
-The white strokes represent the position of differences between the two files.
+The white strokes represent position and amount of differences between the two files.
 
 <div align="center"><img src="https://raw.github.com/pcbje/bufldiff/master/test/output.png" width="500"/></div>
 
