@@ -173,6 +173,7 @@ class Bufldiff(object):
     self.references = {}
     self.result = [0] * slots
     self.divident = max(1, float(os.path.getsize(path2)) / len(self.result));
+    self.feature_count = 0
 
     Buflfeature(path1).getFeatures(self.addToReferences).close()
     Buflfeature(path2).getFeatures(self.compare).close()
@@ -188,30 +189,31 @@ class Bufldiff(object):
     else:
       self.result[position] = -1
 
+    self.feature_count += 1
+
   def save(self, path, ratio=0.1):
     canvas = pyx.canvas.canvas()
-    step = 0.05;
+    step = 0.2
     height = float(len(self.result)) * step * ratio		
     pos = 0
+    factor = len(self.result) / min(self.feature_count, len(self.result))
 
     for res in self.result:
-      config = self.getConfig(res)			
-      canvas.stroke(pyx.path.line(pos,0,pos,height), [pyx.style.linewidth(step * config['factor']), config['color']])
-      pos += step
+      color = self.getColor(res)			
+      if color != None:
+        for x in range(0, factor):
+          canvas.stroke(pyx.path.line(pos,0,pos,height), [pyx.style.linewidth(step), color])
+          pos += step
 
     canvas.writeGSfile(path)
 
-  def getConfig(self, value):
+  def getColor(self, value):
     if value == -1:
-      return {
-        'color': pyx.color.rgb.white,
-        'factor': 6
-      }
-    else:
-      return {
-        'color': pyx.color.rgb.blue,
-        'factor': 1
-      }
+      return pyx.color.rgb.white
+    elif value == 1:
+      return pyx.color.rgb.blue        
+
+    return None
 
 if __name__ == '__main__':
   bufldiff = Bufldiff()
