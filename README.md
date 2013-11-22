@@ -3,6 +3,8 @@ bufldiff
 
 Python tool for visuzalizing data similarity. The algorithm is based on the work of Vassil Roussev and Candice Quates on sdhash and does a byte level comparison of two input files.
 
+Note: The tool is currently too slow for operational use.
+
 #### Install
 
 <pre><code>$ sudo python setup.py install</code></pre>
