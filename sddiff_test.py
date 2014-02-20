@@ -11,20 +11,20 @@ License for the specific language governing permissions and limitations under
 the License.
 """
 import unittest
-import bufldiff
+import sddiff
 
-class BuflDiffUnitTest(unittest.TestCase):
+class SddiffUnitTest(unittest.TestCase):
   def setUp(self):
     pass
 
   def testNext(self):
-    feature = bufldiff.Buflfeature("bufldiff.py")
+    feature = sddiff.Sdfeature("sddiff.py")
     [feature.next() for i in range(0, 20)]    
     self.assertNotEqual(0, feature.next())
     feature.close()
 
   def testGetFeatures(self):
-    diff = bufldiff.Buflfeature("bufldiff.py")
+    diff = sddiff.Sdfeature("sddiff.py")
     diff.getFeatures(self.callback)
     diff.close()
 
@@ -32,8 +32,8 @@ class BuflDiffUnitTest(unittest.TestCase):
     self.assertNotEqual(None, feature)    
   
   def testDiff(self):
-    diff = bufldiff.Bufldiff()
-    diff.diff("bufldiff.py", "bufldiff.py")    
+    diff = sddiff.Sddiff()
+    diff.diff("sddiff.py", "sddiff.py")    
     for value in diff.result:
       self.assertNotEqual(-1, value)
 
