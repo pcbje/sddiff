@@ -9,6 +9,8 @@ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 License for the specific language governing permissions and limitations under
 the License.
+
+Based on the work of Vassil Roussev and Candice Quates (http://sdhash.org)
 """
 import sys
 import os
@@ -79,7 +81,7 @@ for i in range(1, WINDOW_SIZE + 1):
   p = float(i) / WINDOW_SIZE	
   ENTROPY_64_INT[i] = int((-p * math.log(p, 2) / 6) * ENTR_SCALE)
 
-class Buflfeature(object):	
+class Sdfeature(object):	
   def __init__(self, path):
     self.input = open(path, "rb")
     self.ascii = [0] * 256
@@ -160,7 +162,7 @@ class Buflfeature(object):
 
     return self
 
-class Bufldiff(object):
+class Sddiff(object):
   def diff(self, path1, path2, slots=400):
     len1 = os.path.getsize(path1)
     len2 = os.path.getsize(path2)
@@ -175,8 +177,8 @@ class Bufldiff(object):
     self.divident = max(1, float(os.path.getsize(path2)) / len(self.result));
     self.feature_count = 0
 
-    Buflfeature(path1).getFeatures(self.addToReferences).close()
-    Buflfeature(path2).getFeatures(self.compare).close()
+    Sdfeature(path1).getFeatures(self.addToReferences).close()
+    Sdfeature(path2).getFeatures(self.compare).close()
 
   def addToReferences(self, feature):
     self.references[str(feature['bytes'])] = feature['position']
@@ -229,6 +231,6 @@ class Bufldiff(object):
     return None
 
 if __name__ == '__main__':
-  bufldiff = Bufldiff()
-  bufldiff.diff(sys.argv[1], sys.argv[2])
-  bufldiff.save(sys.argv[3])
+  sddiff = Sddiff()
+  sddiff.diff(sys.argv[1], sys.argv[2])
+  sddiff.save(sys.argv[3])
